@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+
+puts "Creating 200 Articles..."
+200.times do
+  article = Article.new(
+    title: Faker::Book.title,
+    content: Faker::Movie.quote,
+    #category_id: rand(1..5),
+    publishing: [true, false].sample
+  )
+  article.save!
+end
