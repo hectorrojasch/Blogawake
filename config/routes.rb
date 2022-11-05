@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   get 'pages/contact'
 
-  root "pages#index"
+  root "articles#index"
 
 end
 
